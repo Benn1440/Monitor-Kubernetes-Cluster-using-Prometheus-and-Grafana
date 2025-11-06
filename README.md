@@ -72,13 +72,23 @@ Install Grafana in the monitoring namespace:<br>
 
 ```helm install grafana grafana/grafana --namespace monitoring```<br> 
 
-<img width="2696" height="846" alt="image" src="https://github.com/user-attachments/assets/f951bdcd-c77e-444c-a12c-f84968c59b97" />
+<img width="2696" height="846" alt="image" src="https://github.com/user-attachments/assets/f951bdcd-c77e-444c-a12c-f84968c59b97" /><br><br>
+
+<img width="1718" height="330" alt="image" src="https://github.com/user-attachments/assets/e5d1b439-bb8f-4067-8b09-c93a75205d20" /><br><br>
+
 
 Retrieve admin login details for Grafana <br>
 
 ```kubectl get secret --namespace monitoring grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo```<br> 
 
 <img width="2182" height="40" alt="image" src="https://github.com/user-attachments/assets/e7d14d1a-059c-4b54-9e0f-a5603079e8ce" />
+
+Forward the Grafana service port:<br>
+
+```kubectl port-forward -n monitoring service/grafana 3000:80```<br>
+Access Grafana at http://localhost:3000 and log in with username admin and the retrieved password.<br><br>
+<img width="2940" height="1760" alt="image" src="https://github.com/user-attachments/assets/8e5a9b03-0231-4b95-8e95-78bdead08bc2" />
+
 
 
 
