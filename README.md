@@ -55,6 +55,8 @@ Forward the Prometheus server port to access it locally:<br>
 
 Prometheus dashboard is up and running.<br>
 
+Open your browser and navigate to http://localhost:9090 to view the Prometheus UI.
+
 <img width="1471" height="817" alt="image" src="https://github.com/user-attachments/assets/e3aef8da-581f-42c0-9846-ece544c4eac2" /><br><br>
 
 
