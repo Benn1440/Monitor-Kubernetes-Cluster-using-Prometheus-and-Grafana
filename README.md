@@ -87,7 +87,9 @@ Forward the Grafana service port:<br>
 
 ```kubectl port-forward -n monitoring service/grafana 3000:80```<br>
 Access Grafana at http://localhost:3000 and log in with username admin and the retrieved password.<br><br>
-<img width="2940" height="1760" alt="image" src="https://github.com/user-attachments/assets/8e5a9b03-0231-4b95-8e95-78bdead08bc2" />
+<img width="2940" height="1760" alt="image" src="https://github.com/user-attachments/assets/8e5a9b03-0231-4b95-8e95-78bdead08bc2" /><br><br>
+<img width="2932" height="1762" alt="image" src="https://github.com/user-attachments/assets/2092dd15-9576-4825-a317-f486f4d1f130" /><br><br>
+
 
 
 
