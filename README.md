@@ -11,7 +11,7 @@ Monitoring Kubernetes clusters is crucial for maintaining the health and perform
 - Helm package manager installed.
 
 ### Minikube would be used as K8s cluster <br><br>
-** Start Minikube <br>
+** Start Minikube but ensure Docker is up <br>
 
 ```minikube start --driver=docker``` <br>
 
