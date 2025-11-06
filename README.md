@@ -68,6 +68,20 @@ Add the Grafana Helm repository and update:
 
 <img width="1622" height="412" alt="image" src="https://github.com/user-attachments/assets/6f55ce12-e3ed-4456-82cf-5aa6b6f8c021" /><br><br>
 
+Install Grafana in the monitoring namespace:<br> 
+
+```helm install grafana grafana/grafana --namespace monitoring```<br> 
+
+<img width="2696" height="846" alt="image" src="https://github.com/user-attachments/assets/f951bdcd-c77e-444c-a12c-f84968c59b97" />
+
+Retrieve admin login details for Grafana <br>
+
+```kubectl get secret --namespace monitoring grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo```<br> 
+
+<img width="2182" height="40" alt="image" src="https://github.com/user-attachments/assets/e7d14d1a-059c-4b54-9e0f-a5603079e8ce" />
+
+
+
 
 
 
