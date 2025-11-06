@@ -59,6 +59,16 @@ Open your browser and navigate to http://localhost:9090 to view the Prometheus U
 
 <img width="1471" height="817" alt="image" src="https://github.com/user-attachments/assets/e3aef8da-581f-42c0-9846-ece544c4eac2" /><br><br>
 
+5. Install Grafana Using Helm
+
+Add the Grafana Helm repository and update:
+
+```helm repo add grafana https://grafana.github.io/helm-charts```<br> 
+```helm repo update```<br>
+
+<img width="1622" height="412" alt="image" src="https://github.com/user-attachments/assets/6f55ce12-e3ed-4456-82cf-5aa6b6f8c021" /><br><br>
+
+
 
 
 
