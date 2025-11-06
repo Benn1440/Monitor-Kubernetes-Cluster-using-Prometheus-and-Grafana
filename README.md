@@ -91,10 +91,12 @@ Access Grafana at http://localhost:3000 and log in with username admin and the r
 <img width="2932" height="1762" alt="image" src="https://github.com/user-attachments/assets/2092dd15-9576-4825-a317-f486f4d1f130" /><br><br>
 
 Persist Grafana state via the command line <br>
-```helm upgrade grafana grafana/grafana --namespace monitoring \``
-  --set persistence.enabled=true \
-  --set persistence.size=2Gi \
-  --set adminPassword=generated-password```
+
+helm upgrade grafana grafana/grafana --namespace monitoring \ <br>
+  --set persistence.enabled=true \ <br>
+  --set persistence.size=1Gi \ <br>
+  --set initChownData.enabled=false \ <br>
+  --set adminPassword=generated-password <br>
 
 
 
