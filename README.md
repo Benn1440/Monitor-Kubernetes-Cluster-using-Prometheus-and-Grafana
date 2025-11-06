@@ -10,4 +10,4 @@ Monitoring Kubernetes clusters is crucial for maintaining the health and perform
 
 - Helm package manager installed.
 
-*** Minikube would be used as K8s cluster 
+** Minikube would be used as K8s cluster 
