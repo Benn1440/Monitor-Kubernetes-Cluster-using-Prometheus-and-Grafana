@@ -98,7 +98,19 @@ helm upgrade grafana grafana/grafana --namespace monitoring \ <br>
   --set initChownData.enabled=false \ <br>
   --set adminPassword=generated-password <br>
 
+6. Configure Prometheus as a Data Source in Grafana
 
+In the Grafana UI:
+
+- Navigate to Configuration > Data Sources.
+
+- Click Add data source.
+
+- Select Prometheus from the list.
+
+- Set the URL to http://prometheus-server.monitoring.svc.cluster.local:80.
+
+- Click Save & Test to verify the connection.
 
 
 
