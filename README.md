@@ -110,7 +110,10 @@ In the Grafana UI:
 
 - Set the URL to http://prometheus-server.monitoring.svc.cluster.local:80.
 
-- Click Save & Test to verify the connection.
+- Click Save & Test to verify the connection.<br>
+
+<img width="1914" height="526" alt="image" src="https://github.com/user-attachments/assets/b4bfbf74-4523-4aff-80d7-8b4481286d05" /><br><br>
+
 
 
 
