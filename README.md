@@ -145,7 +145,7 @@ Customize panels and visualizations according to your needs.
 
 Persistent Storage: For production environments, configure persistent volumes for Prometheus and Grafana to retain data after pod restarts.
 
-Set Up Alerting: Configure Prometheus alerting rules and integrate with notification channels like Slack or email to receive alerts on critical issues.
+Set Up Alerting: Configure Prometheus alerting rules and integrate with notification channels like Slack or email to receive alerts on critical issues.``https://grafana.com/tutorials/alerting-get-started/``
 
 Secure Access: Implement authentication and secure connections (TLS/SSL) for accessing Prometheus and Grafana dashboards.
 
