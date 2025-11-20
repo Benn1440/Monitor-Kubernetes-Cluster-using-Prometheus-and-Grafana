@@ -90,6 +90,74 @@ Access Grafana at http://localhost:3000 and log in with username admin and the r
 <img width="2940" height="1760" alt="image" src="https://github.com/user-attachments/assets/8e5a9b03-0231-4b95-8e95-78bdead08bc2" /><br><br>
 <img width="2932" height="1762" alt="image" src="https://github.com/user-attachments/assets/2092dd15-9576-4825-a317-f486f4d1f130" /><br><br>
 
+Persist Grafana state via the command line <br>
+
+helm upgrade grafana grafana/grafana --namespace monitoring \ <br>
+  --set persistence.enabled=true \ <br>
+  --set persistence.size=1Gi \ <br>
+  --set initChownData.enabled=false \ <br>
+  --set adminPassword=generated-password <br>
+
+6. Configure Prometheus as a Data Source in Grafana
+
+In the Grafana UI:
+
+- Navigate to Configuration > Data Sources.
+
+- Click Add data source.
+
+- Select Prometheus from the list.
+
+- Set the URL to http://prometheus-server.monitoring.svc.cluster.local:80.
+
+- Click Save & Test to verify the connection.<br>
+
+<img width="1914" height="526" alt="image" src="https://github.com/user-attachments/assets/b4bfbf74-4523-4aff-80d7-8b4481286d05" /><br><br>
+
+7. Import a Kubernetes Dashboard into Grafana
+
+Grafana offers pre-built dashboards for Kubernetes monitoring.
+
+- Go to Create > Import in Grafana.
+
+- Enter a dashboard ID from Grafana’s dashboard repository (e.g., 6417 for Kubernetes cluster monitoring).
+
+- Click Load.
+
+- Select the Prometheus data source you added earlier.
+
+- Click Import.
+
+Explore the Metrics and Dashboards
+
+With the dashboard imported, you can now:
+
+Monitor real-time metrics such as CPU usage, memory consumption, and network traffic.
+
+View pod statuses and cluster health.
+
+Customize panels and visualizations according to your needs.
+
+<img width="2916" height="1838" alt="image" src="https://github.com/user-attachments/assets/e6527703-5aa4-4ba5-b75b-d1753d920643" /><br><br>
+
+
+***Additional Tips***
+
+Persistent Storage: For production environments, configure persistent volumes for Prometheus and Grafana to retain data after pod restarts.
+
+Set Up Alerting: Configure Prometheus alerting rules and integrate with notification channels like Slack or email to receive alerts on critical issues.``https://grafana.com/tutorials/alerting-get-started/``
+
+Secure Access: Implement authentication and secure connections (TLS/SSL) for accessing Prometheus and Grafana dashboards.
+
+Scaling: Modify resource limits and replica counts in the Helm charts to scale the monitoring stack according to your cluster size.
+
+***Benefits of This Setup***
+
+Centralized Monitoring: Offers a single point to observe the entire Kubernetes cluster.
+
+Customizable Dashboards: Grafana allows for extensive customization to focus on the metrics that matter most.
+
+Proactive Issue Detection: Early detection of anomalies helps in quicker resolution and less downtime.
 
 
 
